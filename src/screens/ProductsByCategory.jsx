@@ -1,7 +1,6 @@
 import {
   Dimensions,
   FlatList,
-  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -10,6 +9,7 @@ import {
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import SearchBar from '../components/SearchBar';
+import FastImage from 'react-native-fast-image';
 
 const {width} = Dimensions.get('window');
 
@@ -62,8 +62,9 @@ const ProductsByCategory = ({route}) => {
                   alignItems: 'center',
                   marginHorizontal: 12,
                 }}>
-                <Image
-                  source={{uri: image}}
+                <FastImage
+                  source={{uri: image, priority: FastImage.priority.normal}}
+                  resizeMode={FastImage.resizeMode.contain}
                   style={{
                     height: 64,
                     width: 64,
@@ -90,8 +91,12 @@ const ProductsByCategory = ({route}) => {
               </View>
             </View>
             <View style={styles.secondView}>
-              <Image
-                source={{uri: selectedProduct.thumbnail}}
+              <FastImage
+                source={{
+                  uri: selectedProduct.thumbnail,
+                  priority: FastImage.priority.normal,
+                }}
+                resizeMode={FastImage.resizeMode.contain}
                 style={styles.productImage}
               />
               <TouchableOpacity style={styles.addButton}>

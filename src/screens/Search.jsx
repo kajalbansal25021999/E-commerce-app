@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
+import FastImage from 'react-native-fast-image';
 
 const Search = ({navigation}) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -155,8 +156,9 @@ const Search = ({navigation}) => {
                       flexDirection: 'row',
                       alignItems: 'center',
                     }}>
-                    <Image
-                      source={{uri: image}}
+                    <FastImage
+                      source={{uri: image, priority: FastImage.priority.normal}}
+                      resizeMode={FastImage.resizeMode.contain}
                       style={{
                         height: 26,
                         width: 20,
@@ -191,8 +193,12 @@ const Search = ({navigation}) => {
                       </View>
                     </View>
                     <View style={styles.secondView}>
-                      <Image
-                        source={{uri: image}}
+                      <FastImage
+                        source={{
+                          uri: image,
+                          priority: FastImage.priority.normal,
+                        }}
+                        resizeMode={FastImage.resizeMode.contain}
                         style={styles.productImage}
                       />
                       <TouchableOpacity style={styles.addButton}>
@@ -224,8 +230,9 @@ const Search = ({navigation}) => {
                       alignItems: 'center',
                     }}>
                     <Text style={styles.item}>{item.title}</Text>
-                    <Image
-                      source={{uri: image}}
+                    <FastImage
+                      source={{uri: image, priority: FastImage.priority.normal}}
+                      resizeMode={FastImage.resizeMode.contain}
                       style={{
                         height: 24,
                         width: 24,

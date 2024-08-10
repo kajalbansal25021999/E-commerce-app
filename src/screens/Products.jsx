@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import SearchBar from '../components/SearchBar';
+import FastImage from 'react-native-fast-image';
 
 const {width} = Dimensions.get('window');
 
@@ -106,8 +107,9 @@ const Products = ({navigation}) => {
                     flex: 1,
                     alignItems: 'center',
                   }}>
-                  <Image
-                    source={{uri: image}}
+                  <FastImage
+                    source={{uri: image, priority: FastImage.priority.normal}}
+                    resizeMode={FastImage.resizeMode.contain}
                     style={{
                       height: 64,
                       width: 64,
