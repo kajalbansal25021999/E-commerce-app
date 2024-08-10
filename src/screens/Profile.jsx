@@ -4,7 +4,7 @@ import React from 'react';
 const Profile = () => {
   return (
     <View style={styles.container}>
-      <Text>Profile</Text>
+      <Text style={styles.text}>Profile</Text>
     </View>
   );
 };
@@ -13,4 +13,7 @@ export default Profile;
 
 const styles = StyleSheet.create({
   container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  text: {
+    color: 'black',
+  },
 });

@@ -31,6 +31,7 @@ const SearchBar = ({category = 'Product Categories', handleBackPress}) => {
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
         marginBottom: 16,
+        elevation: 3,
       }}>
       <View
         style={{

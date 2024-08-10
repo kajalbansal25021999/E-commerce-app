@@ -60,6 +60,7 @@ const ProductsByCategory = ({route}) => {
                   maxWidth: (width - 30) / 4,
                   flex: 1,
                   alignItems: 'center',
+                  marginHorizontal: 12,
                 }}>
                 <Image
                   source={{uri: image}}

@@ -4,7 +4,7 @@ import React from 'react';
 const Overview = () => {
   return (
     <View style={styles.container}>
-      <Text>Overview</Text>
+      <Text style={styles.text}>Overview</Text>
     </View>
   );
 };
@@ -12,5 +12,12 @@ const Overview = () => {
 export default Overview;
 
 const styles = StyleSheet.create({
-  container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    color: 'black',
+  },
 });

@@ -101,8 +101,10 @@ const Search = ({navigation}) => {
               flex: 1,
               height: 50,
               marginLeft: 10,
+              color: '#2A2A2A',
             }}
             placeholder="Search products..."
+            placeholderTextColor="#C5BEC0"
             cursorColor="#C5BEC0"
             selectionColor="#C5BEC0"
             value={searchQuery}
@@ -162,7 +164,8 @@ const Search = ({navigation}) => {
                     />
                     <Text
                       style={
-                        ([styles.item], {fontWeight: '400', marginLeft: 8})
+                        ([styles.item],
+                        {fontWeight: '400', marginLeft: 8, color: '#2A2A2A'})
                       }>
                       {item.title}
                     </Text>
