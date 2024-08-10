@@ -131,11 +131,12 @@ const Products = ({navigation}) => {
 export default Products;
 
 const styles = StyleSheet.create({
-  title: {color: '#6B6062', fontWeight: '500', marginRight: 16},
+  title: {color: '#6B6062', fontWeight: '500', marginRight: 16, fontSize: 9.6},
   item: {
     fontWeight: '500',
     marginTop: 4,
     color: '#2A2A2A',
     textAlign: 'center',
+    fontSize: 10,
   },
 });

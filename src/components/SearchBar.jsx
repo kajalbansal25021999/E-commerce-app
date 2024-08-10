@@ -47,8 +47,12 @@ const SearchBar = ({category = 'Product Categories'}) => {
             />
           </TouchableOpacity>
           <View style={{marginLeft: 16}}>
-            <Text style={{fontWeight: 'bold'}}>{formattedCategory}</Text>
-            <Text style={{fontWeight: '400'}}>Select any product to add</Text>
+            <Text style={{fontWeight: 'bold', fontSize: 16}}>
+              {formattedCategory}
+            </Text>
+            <Text style={{fontWeight: '400', fontSize: 12}}>
+              Select any product to add
+            </Text>
           </View>
         </View>
 

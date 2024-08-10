@@ -120,10 +120,17 @@ const Search = ({navigation}) => {
               />
             </TouchableOpacity>
           )}
-          <Image
-            source={require('../assets/search.png')}
-            style={{height: 20, width: 20, tintColor: '#C5BEC0', marginLeft: 8}}
-          />
+          <TouchableOpacity onPress={handleSearchSubmit}>
+            <Image
+              source={require('../assets/search.png')}
+              style={{
+                height: 20,
+                width: 20,
+                tintColor: '#C5BEC0',
+                marginLeft: 8,
+              }}
+            />
+          </TouchableOpacity>
         </View>
       </View>
       {isLoading ? (
@@ -175,8 +182,8 @@ const Search = ({navigation}) => {
                     <View style={styles.firstView}>
                       <Text style={styles.productTitle}>{item.title}</Text>
                       <View style={styles.nameContainer}>
-                        <Text style={styles.name}>kajal</Text>
-                        <Text style={styles.name}>bansal</Text>
+                        <Text style={styles.name}>{item.weight}0g</Text>
+                        <Text style={styles.name}>{item.price}</Text>
                       </View>
                     </View>
                     <View style={styles.secondView}>
