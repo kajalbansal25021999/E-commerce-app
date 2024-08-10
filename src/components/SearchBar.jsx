@@ -2,7 +2,7 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 
-const SearchBar = ({category = 'Product Categories'}) => {
+const SearchBar = ({category = 'Product Categories', handleBackPress}) => {
   const navigation = useNavigation();
 
   const capitalizeWords = str => {
@@ -13,7 +13,7 @@ const SearchBar = ({category = 'Product Categories'}) => {
   };
   const formattedCategory = capitalizeWords(category);
 
-  const handleBackBtn = () => navigation.pop();
+  const handleBackBtn = () => handleBackPress || navigation.pop();
 
   const handleSearchClick = () => {
     navigation.navigate('Search');

@@ -54,7 +54,7 @@ const Products = ({navigation}) => {
   };
 
   const FixedSearchHeader = () => {
-    return <SearchBar />;
+    return <SearchBar handleBackPress={() => {}} />;
   };
 
   if (loading) {

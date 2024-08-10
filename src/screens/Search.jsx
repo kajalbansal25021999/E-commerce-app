@@ -145,7 +145,8 @@ const Search = ({navigation}) => {
               renderItem={({item}) => {
                 const image = item && item.thumbnail;
                 return (
-                  <View
+                  <TouchableOpacity
+                    onPress={handleSearchSubmit}
                     style={{
                       paddingHorizontal: 12,
                       marginVertical: 6,
@@ -165,7 +166,7 @@ const Search = ({navigation}) => {
                       }>
                       {item.title}
                     </Text>
-                  </View>
+                  </TouchableOpacity>
                 );
               }}
             />
